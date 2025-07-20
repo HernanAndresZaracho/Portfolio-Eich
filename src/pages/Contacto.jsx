@@ -51,7 +51,7 @@ const Contacto = () => {
         escribime a{" "}
         <a
           href="mailto:hernanandreszaracho@gmail.com"
-          className="underline hover:text-[#f8f8f8]"
+          className="underline hover:text-[#f8f8f8] break-words"
         >
           hernanandreszaracho@gmail.com
         </a>

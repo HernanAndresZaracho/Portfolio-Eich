@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 text-center flex flex-col items-center gap-6">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold">
-          StartApp
+          Eich Enterprise
         </Link>
 
         {/* Redes sociales */}
@@ -43,7 +43,8 @@ const Footer = () => {
 
         {/* Texto legal */}
         <p className="text-sm text-white/70">
-          © {new Date().getFullYear()} StartApp. Todos los derechos reservados.
+          © {new Date().getFullYear()} Eich Enterprise. Todos los derechos
+          reservados.
         </p>
       </div>
     </footer>

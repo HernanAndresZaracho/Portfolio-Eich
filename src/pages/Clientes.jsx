@@ -1,8 +1,8 @@
 const clientes = [
   {
-    nombre: "Facultad de Medicina",
-    logo: "https://med.unne.edu.ar/wp-content/uploads/2022/10/Logo_MED_PNG.png",
-    url: "https://med.unne.edu.ar", // sitio oficial real
+    nombre: "Fichap",
+    logo: "https://cdn.prod.website-files.com/66dea030b1b34fdbc17288af/66e13195be3bdc683f4c1178_BrandLogo.svg",
+    url: "https://www.fichap.com/",
   },
   {
     nombre: "Electro Punto",
@@ -13,6 +13,11 @@ const clientes = [
     nombre: "CM Innovation",
     logo: "https://cminnovation.com.ar/wp-content/uploads/2022/09/cropped-LOGO-FC-165x106.png",
     url: "https://cminnovation.com.ar/",
+  },
+  {
+    nombre: "Facultad de Medicina",
+    logo: "https://med.unne.edu.ar/wp-content/uploads/2022/10/Logo_MED_PNG.png",
+    url: "https://med.unne.edu.ar",
   },
   {
     nombre: "Tucuman Shopping",
@@ -36,7 +41,7 @@ const Clientes = () => {
       </div>
 
       {/* Logos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
         {clientes.map(({ nombre, logo, url }) => (
           <a
             key={nombre}

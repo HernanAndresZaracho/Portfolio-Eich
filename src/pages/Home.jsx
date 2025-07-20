@@ -64,7 +64,7 @@ const Home = () => {
   return (
     <div className="text-white overflow-hidden bg-[#5e0721]">
       {/* HERO SECTION */}
-      <section className="relative w-full h-[85vh] flex items-center justify-center">
+      <section className="relative w-full min-h-[95vh] flex items-center justify-center py-16">
         {/* Imagen de fondo */}
         <img
           src={hernanProfile}
@@ -128,7 +128,7 @@ const Home = () => {
           {proyectos.map(({ nombre, descripcion, imagen }) => (
             <div
               key={nombre}
-              className="bg-[#5e0721] rounded-xl overflow-hidden border-2 shadow-md hover:shadow-lg transition cursor-pointer"
+              className="bg-[#f8f8f8] text-[#5e0721] rounded-xl overflow-hidden border-2 shadow-md hover:shadow-lg transition cursor-pointer"
             >
               <img
                 src={imagen}
