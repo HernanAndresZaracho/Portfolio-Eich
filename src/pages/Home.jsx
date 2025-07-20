@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaBug, FaCode, FaRobot, FaChartLine } from "react-icons/fa";
 
-const heroImg = "/src/assets/hernan-profile.png"; // Cambiar luego por ruta real o usar import
-// Como ya subiste la foto, la puedes poner en /src/assets y cambiar el src aquí
+import hernanProfile from "../assets/hernan-profile.png";
 
 const servicios = [
   {
@@ -68,7 +67,7 @@ const Home = () => {
       <section className="relative w-full h-[85vh] flex items-center justify-center">
         {/* Imagen de fondo */}
         <img
-          src={heroImg}
+          src={hernanProfile}
           alt="Hernán Andres Zaracho"
           className="absolute h-full object-cover opacity-40"
           style={{ filter: "grayscale(100%)" }}

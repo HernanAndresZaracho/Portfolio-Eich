@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logoGif from "../assets/eich_logo.gif";
 
 const navItems = [
   { name: "Inicio", path: "/" },
@@ -55,11 +56,7 @@ const Navbar = () => {
       >
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 text-white">
-          <img
-            src="/src/assets/eich_logo.gif"
-            alt="Logo"
-            className="h-16 w-16 object-contain"
-          />
+          <img src={logoGif} alt="Logo" className="h-16 w-16 object-contain" />
           <span className="text-xl font-bold">Eich Enterprise</span>
         </Link>
 

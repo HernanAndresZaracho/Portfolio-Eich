@@ -1,11 +1,11 @@
-import heroImg from "../assets/hernan-profile.png"; // O la ruta que uses para tu foto
+import hernanProfile from "../assets/hernan-profile.png"; // O la ruta que uses para tu foto
 
 const SobreMi = () => {
   return (
     <section className="relative w-full min-h-[85vh] flex items-center justify-center bg-[#5e0721] overflow-hidden">
       {/* Imagen de fondo */}
       <img
-        src={heroImg}
+        src={hernanProfile}
         alt="Hernán Andres Zaracho"
         className="absolute inset-0 w-full h-full object-cover opacity-40"
         style={{ filter: "grayscale(100%)" }}
