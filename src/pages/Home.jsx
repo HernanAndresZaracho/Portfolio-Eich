@@ -90,12 +90,13 @@ const Home = () => {
             >
               Conocé mi trabajo
             </Link>
-            <Link
-              to="/contacto"
+            <a
+              href="/CV-Zaracho_Hernan_Andres.pdf"
+              download
               className="border-2 border-white hover:bg-white hover:text-[#5e0721] text-white font-semibold px-6 py-3 rounded-full transition"
             >
-              Hablemos
-            </Link>
+              Descargar CV
+            </a>
           </div>
         </div>
       </section>

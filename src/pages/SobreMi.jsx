@@ -53,6 +53,15 @@ const SobreMi = () => {
             personas con lo que sé, como lo hice desde el principio.
           </p>
         </div>
+        <div className="mt-8">
+          <a
+            href="/public/CV-Zaracho_Hernan_Andres.pdf"
+            download
+            className="inline-block border-2 border-[#5e0721] bg-white text-[#5e0721] hover:bg-[#5e0721] hover:text-[#f8f8f8] hover:border-[#f8f8f8] font-semibold px-6 py-3 rounded-full transition"
+          >
+            Descargar CV
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { CiFacebook, CiInstagram, CiTwitter } from "react-icons/ci";
+import { CiLinkedin, CiInstagram, CiTwitter } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -13,31 +13,31 @@ const Footer = () => {
         {/* Redes sociales */}
         <div className="flex gap-6">
           <a
-            href="https://facebook.com"
+            href="https://www.linkedin.com/in/hernan-andres-zaracho/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
             className="hover:text-white/80"
           >
-            <CiFacebook size={24} />
+            <CiLinkedin size={24} />
           </a>
           <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="hover:text-white/80"
-          >
-            <CiInstagram size={24} />
-          </a>
-          <a
-            href="https://twitter.com"
+            href="https://x.com/hernan_zaracho"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
             className="hover:text-white/80"
           >
             <CiTwitter size={24} />
+          </a>
+          <a
+            href="https://www.instagram.com/hernan_andres_zaracho/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="hover:text-white/80"
+          >
+            <CiInstagram size={24} />
           </a>
         </div>
 
