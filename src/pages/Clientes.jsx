@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 const clientes = [
   {
     nombre: "Fichap",
@@ -30,7 +33,13 @@ const Clientes = () => {
   return (
     <section className="relative bg-[#5e0721] text-white py-20 px-6 md:px-24 overflow-hidden">
       {/* Encabezado */}
-      <div className="text-center max-w-3xl mx-auto mb-16">
+      <motion.div
+        className="text-center max-w-3xl mx-auto mb-16"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
           Clientes con los que trabajé
         </h1>
@@ -38,18 +47,22 @@ const Clientes = () => {
           He colaborado con empresas de distintos rubros, aportando tecnología y
           soluciones adaptadas a cada necesidad.
         </p>
-      </div>
+      </motion.div>
 
       {/* Logos */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-        {clientes.map(({ nombre, logo, url }) => (
-          <a
+        {clientes.map(({ nombre, logo, url }, index) => (
+          <motion.a
             key={nombre}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white rounded-xl p-6 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition duration-300 hover:scale-[1.03]"
             aria-label={`Sitio web de ${nombre}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
           >
             <img
               src={logo}
@@ -60,7 +73,7 @@ const Clientes = () => {
             <span className="text-[#5e0721] font-semibold text-center text-sm group-hover:underline">
               {nombre}
             </span>
-          </a>
+          </motion.a>
         ))}
       </div>
     </section>

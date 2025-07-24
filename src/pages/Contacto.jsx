@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
-const SERVICE_ID = "service_haz2013emj"; // tu Service ID
-const TEMPLATE_ID = "template_lkx7plh"; // tu Template ID
-const PUBLIC_KEY = "QX73OFRjjC6A-W8K2"; // tu Public Key (antes User ID)
+const SERVICE_ID = "service_haz2013emj";
+const TEMPLATE_ID = "template_lkx7plh";
+const PUBLIC_KEY = "QX73OFRjjC6A-W8K2";
 
 const Contacto = () => {
   const form = useRef();
@@ -42,7 +44,12 @@ const Contacto = () => {
   };
 
   return (
-    <div className="bg-[#5e0721] min-h-screen py-16 px-6 md:px-24 text-white max-w-3xl mx-auto">
+    <motion.div
+      className="bg-[#5e0721] min-h-screen py-16 px-6 md:px-24 text-white max-w-3xl mx-auto"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">
         Contacto
       </h1>
@@ -58,10 +65,13 @@ const Contacto = () => {
         .
       </p>
 
-      <form
+      <motion.form
         ref={form}
         onSubmit={sendEmail}
         className="flex flex-col gap-6 bg-white rounded-xl p-8 text-[#5e0721] shadow-lg"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
       >
         <label className="flex flex-col">
           Nombre
@@ -122,9 +132,18 @@ const Contacto = () => {
           Enviar
         </button>
 
-        {status && <p className="mt-4 text-center text-green-600">{status}</p>}
-      </form>
-    </div>
+        {status && (
+          <motion.p
+            className="mt-4 text-center text-green-600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            {status}
+          </motion.p>
+        )}
+      </motion.form>
+    </motion.div>
   );
 };
 

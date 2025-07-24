@@ -1,8 +1,16 @@
-import hernanProfile from "../assets/hernan-profile.png"; // Podés cambiar o quitar la imagen si preferís
+import hernanProfile from "../assets/hernan-profile.png";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 const SobreMi = () => {
   return (
-    <section className="bg-[#5e0721] text-white py-20 px-6 md:px-24">
+    <motion.section
+      className="bg-[#5e0721] text-white py-20 px-6 md:px-24"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <div className="max-w-5xl mx-auto text-center">
         {/* Imagen tipo avatar (opcional) */}
         <div className="mb-10 flex justify-center">
@@ -63,7 +71,7 @@ const SobreMi = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

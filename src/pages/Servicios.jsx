@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 const servicios = [
   {
@@ -42,23 +44,33 @@ const Servicios = () => {
   return (
     <div className="bg-[#5e0721] text-white">
       {/* Intro */}
-      <section className="py-16 px-6 md:px-24 text-center">
+      <motion.section
+        className="py-16 px-6 md:px-24 text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Mis Servicios</h1>
         <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/90">
           Aplico tecnología para mejorar la eficiencia, reducir errores y
           potenciar resultados. Desde automatización y QA hasta desarrollo y
           soporte técnico.
         </p>
-      </section>
+      </motion.section>
 
       {/* Servicios Detallados */}
       <section className="py-16 px-6 md:px-24 bg-white text-[#5e0721]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {servicios.map(({ titulo, descripcion, imagen }) => (
-            <div
+            <motion.div
               key={titulo}
               className="flex flex-col bg-[#f8f8f8] border rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(94,7,33,0.5)] 
-              hover:shadow-[0_6px_28px_rgba(94,7,33,0.7)] transition"
+      hover:shadow-[0_6px_28px_rgba(94,7,33,0.7)] transition"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
             >
               <img
                 src={imagen}
@@ -71,13 +83,19 @@ const Servicios = () => {
                   {descripcion}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 px-6 md:px-24 bg-[#5e0721] text-white text-center">
+      <motion.section
+        className="py-16 px-6 md:px-24 bg-[#5e0721] text-white text-center"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           ¿Querés llevar tus procesos al siguiente nivel?
         </h2>
@@ -90,7 +108,7 @@ const Servicios = () => {
         >
           Contactame
         </Link>
-      </section>
+      </motion.section>
     </div>
   );
 };
